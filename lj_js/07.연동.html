@@ -1,0 +1,40 @@
+<html>
+<head>
+	<style>
+		body {
+			min-height: 300vh;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="count"></h1>
+	<button id="add">
+		<h1>더하기</h1>
+	</button>
+
+	<script>
+		var ct = 0;
+		var count = document.getElementById('count');
+		var add = document.getElementById('add');
+
+		init();
+
+		function init() {
+			count.innerHTML = ct;
+		}
+		
+		function onClickAdd() {
+			ct = ct + 1;
+			count.innerHTML = `<i>${ct}</i>`;
+		}
+
+		function onScroll() {
+			console.log('scrolling');
+		}
+
+		add.addEventListener('click', onClickAdd);
+		window.addEventListener('scroll', onScroll);
+
+	</script>
+</body>
+</html>

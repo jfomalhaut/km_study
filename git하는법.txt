@@ -1,0 +1,16 @@
+1일차
+javascript, 연동까지
+git 사용법
+
+
+
+[git]
+
+다운로드할 때
+1. git pull
+
+업로드할 때
+1. git pull
+2. git add .
+3. git commit -m "dd"
+4. git push 
