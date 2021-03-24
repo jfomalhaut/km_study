@@ -1,0 +1,42 @@
+<html>
+<body>
+    <hi id="count"></hi>
+    <button id="change">
+        <hi>더하기</hi>
+    </button>
+    <button id="minus">
+        <h1>빼기</h1>
+    </button>
+
+    <script>
+        var ct = 0;
+        var count = document.getElementById('count');
+        var change = document.getElementById('change');
+        var minus = document.getElementById('minus');
+        
+        init();
+
+        function init() {
+            count.innerHTML = ct;
+
+        }
+
+       // count.innerHTML = 200;
+        function onClickChange() {
+            ct = ct + 1;
+            count.innerHTML = ct;            
+        }
+
+        function onclickminus() {
+            ct = ct - 1;
+            count.innerHTML = `<i>${ct}</i>`;
+
+        }
+
+
+        change.addEventListener('click', onClickChange);
+        minus.addEventListener('click', onclickminus);
+        console.log(count);
+    </script>
+</body>
+</html>

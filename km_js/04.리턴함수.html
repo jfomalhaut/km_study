@@ -1,0 +1,25 @@
+<html>
+<body>
+    <script>
+        
+        var price1 = 20000;
+        var price2 = 30000;
+        var price3 = 40000;
+
+        var newPrice1 = comma(price1);
+        var newPrice2 = comma(price2);
+        var newPrice3 = comma(price3);
+
+        console.log(newPrice1);
+        console.log(newPrice2);
+        console.log(newPrice3);
+
+        function comma(number){
+            var addComma = new Intl.NumberFormat().format(number);
+            return addComma;
+        }
+
+
+    </script>
+</body>
+</html>
