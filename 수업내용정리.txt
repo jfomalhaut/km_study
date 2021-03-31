@@ -12,4 +12,4 @@ v form 태그 사용
 v 값 불러오고 사용하기
 v addEventListener, scroll
 v classList, add/remove
-index개념을 위한 fadeIn, Out 효과 적용
+v index개념을 위한 fadeIn, Out 효과 적용
