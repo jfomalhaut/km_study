@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style>
+        header{
+            height: 100px;
+            line-height: 100px;
+            background: white;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid;
+
+        }
+        
+        main{
+            padding-top: 100px;
+            background: #f0f0f0;
+            min-height: 300vh;
+        }
+        h1{
+            margin: 0px;
+            color: black;
+        }
+
+        .header1{
+            background: black;
+        }
+        .header1 h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>header</h1>
+    </header>
+    <main>
+        <h1>HEllo</h1>
+        <h1>HEllo</h1>
+        <h1>HEllo</h1>
+        <h1>HEllo</h1>
+        <h1>HEllo</h1>
+        <h1>HEllo</h1>
+        <h1>HEllo</h1>
+        <h1>HEllo</h1>
+        <h1>HEllo</h1>
+    </main>
+
+    <script>
+        var header = document.querySelector('#header');
+        
+        function onScroll(){
+            var scrollTop = window.scrollY;
+            
+            if(scrollTop !== 0){
+                header.classList.add('header1');
+            }
+            else{
+                header.classList.remove('header1');
+            }
+        }
+        
+        window.addEventListener('scroll', onScroll);
+
+    </script>
+</body>
+</html>

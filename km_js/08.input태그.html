@@ -1,0 +1,17 @@
+<html>
+<body>
+    <input type="text" id="username">
+    <button id="check">확인</button>
+    <script>
+        var username = document.querySelector('#username');
+        var check = document.querySelector('#check');
+
+        function onClickCheck(){
+            var value = username.value;
+            console.log(value);
+        }
+        check.addEventListener('click', onClickCheck);
+
+    </script>        
+</body>
+</html>

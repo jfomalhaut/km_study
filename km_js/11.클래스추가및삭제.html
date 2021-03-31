@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background: dodgerblue;
+        }
+        .tomato{
+            background: tomato !important;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box"></div>
+    <button id="change">change</button>
+    <button id="remove">remove</button>
+    <script>
+        var box= one('#box');
+        var change = one('#change');
+        var remove = one('#remove');
+        
+        function onChangeHandler(){
+            box.classList.add('tomato');
+        }
+        function onRemoveHandler(){
+            box.classList.remove('tomato');
+        }
+
+        change.addEventListener('click', onChangeHandler);
+        remove.addEventListener('click', onRemoveHandler);
+        
+
+    
+        function one(element){
+            return document.querySelector(element);
+        }
+    </script>
+</body>
+</html>
