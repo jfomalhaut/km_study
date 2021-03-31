@@ -1,0 +1,32 @@
+<html>
+<head>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			background: dodgerblue;
+		}
+		.tomato {
+			background: tomato !important;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<button id="change">change</button>
+	<script>
+		var box = one('#box');
+		var change = one('#change');
+
+		function onChangeHandler() {
+			box.classList.add('tomato');
+		}
+
+		change.addEventListener('click', onChangeHandler);
+
+		function one(element) {
+			return document.querySelector(element);
+		}
+	</script>
+</body>
+</html>

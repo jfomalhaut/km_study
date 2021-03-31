@@ -1,0 +1,52 @@
+<html>
+<head>
+	<style>
+		.container {
+			width: 500px;
+			height: 300px;
+			margin: 50px auto;
+			position: relative;
+		}
+		.slide {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: .5s;
+		}
+		.slide:nth-child(1) { background: dodgerblue; }
+		.slide:nth-child(2) { background: tomato; }
+		.slide:nth-child(3) { background: yellowgreen; }
+		.slide:nth-child(4) { background: orchid; }
+
+		.active {
+			opacity: 1;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="slide active"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+	</div>
+	<div>
+		<button id="next">Next</button>
+	</div>
+	<script>
+
+		var next = document.querySelector('#next');
+		var slides = document.querySelectorAll('.slide');
+
+		function onClickNext() {
+			
+		}
+
+		next.addEventListener('click', onClickNext);
+
+	</script>
+</body>
+</html>

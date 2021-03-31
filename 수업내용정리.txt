@@ -1,0 +1,15 @@
+[1일차]
+스크립트 기초
+함수
+리턴함수
+조건문
+반복문
+연동(document.getElementById)
+
+[2일차]
+v input 태그 연동
+v form 태그 사용
+v 값 불러오고 사용하기
+v addEventListener, scroll
+v classList, add/remove
+index개념을 위한 fadeIn, Out 효과 적용

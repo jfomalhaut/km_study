@@ -1,0 +1,64 @@
+<html>
+<head>
+	<style>
+		header {
+			height: 100px;
+			line-height: 100px;
+			background: white;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			position: fixed;
+			left: 0; top: 0;
+			width: 100%;
+			border-bottom: 1px solid;
+		}
+		main {
+			padding-top: 100px;
+			background: #f0f0f0;
+			min-height: 300vh;
+		}
+		h1 {
+			margin: 0;
+		}
+		.active {
+			background: black;
+		}
+		.active h1 {
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1>HEADER</h1>
+	</header>
+	<main>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+		<h1>Hello</h1>
+	</main>
+	<script>
+		var header = document.querySelector('#header');
+
+		function onScroll() {
+			var scrollTop = window.scrollY;
+			if (scrollTop > 0) {
+				header.classList.add('active');
+			} else {
+				header.classList.remove('active');
+			}
+		}
+		
+		window.addEventListener('scroll', onScroll);
+	</script>
+</body>
+</html>

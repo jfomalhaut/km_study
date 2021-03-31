@@ -1,0 +1,29 @@
+<html>
+<body>
+	<form name="login">
+		<input type="text" name="username" placeholder="username">
+		<input type="password" name="password" placeholder="password">
+		<button>로그인</button>
+	</form>
+	<script>
+		var USERNAME = 'dlwnssla';
+		var PASSWORD = 'dlwns1234';
+
+		var form = document.login;
+
+		function onSubmit(ev) {
+			ev.preventDefault(); // form이 가지는 기능을 끈다.
+			const { username, password } = form;
+			if (username.value === USERNAME && password.value === PASSWORD) {
+				alert('Success!!');
+			} else {
+				alert('Fail!!');
+				form.password.value = '';
+			}
+		}
+
+		form.addEventListener('submit', onSubmit);
+
+	</script>
+</body>
+</html>
