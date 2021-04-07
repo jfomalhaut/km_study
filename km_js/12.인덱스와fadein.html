@@ -37,24 +37,45 @@
     </div>
     <div>
         <button id="next">Next</button>
+        <button id="bofore">Before</button>
     </div>
     <script>
 
         var next = document.querySelector('#next');
+        var before = document.querySelector('#before')
         var slides = document.querySelectorAll('.slide');
         var start = 0;
 
         function onClickNext(){
-            if(start < 4){
+            if(start < 3){
             slides[start].classList.remove('active');
             slides[start + 1].classList.add('active');
             start = start + 1;
             }
             else{
-                start = 0;
+                
+            
+               
             }
+        
+
+        }
+        function onClickBefore(){
+            if(start > 0){
+                slides[start].classList.remove('active');
+                slides[start - 1].classList.add('active');
+                start = start - 1;
+
+            }
+            else{
+
+            }
+
+
         } //next 완성 , 이전으로 진행 setInterval를 이용해서 자동으로 넘어가게 만들기.
         next.addEventListener('click', onClickNext);
+        before.addEventListener('click', onClickBefore);
+
 
     </script>
 </body>
