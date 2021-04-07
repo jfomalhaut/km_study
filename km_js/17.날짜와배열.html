@@ -1,0 +1,33 @@
+<html>
+<body>
+    <script>
+
+        var yoil=['일', '월', '화', '수', '목', '금', '토'];
+
+        var now = new Date();
+        console.log(now);
+        //moment 라이브러리.
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1 ;
+        var date = now.getDate();
+
+        var hour = now.getHours();
+        var minite = now.getMinutes();
+        var second = now.getSeconds();
+
+        var day= yoil[now.getDay()];
+
+        console.log(day);
+
+        var result =`${year}-${month}-${date}`;
+        document.write(result);
+
+        function zero(num){
+            return num < 10 ? '0' + num : num;
+        }
+
+
+
+    </script>
+</body>
+</html>

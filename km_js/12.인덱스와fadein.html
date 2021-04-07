@@ -15,6 +15,8 @@
             height: 100%;
             opacity: 0;
             transition: .5s;
+            line-height: 500px;
+
 
         }
         .slide:nth-child(1) { background: dodgerblue;}
@@ -30,14 +32,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="slide active"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
+        <div class="slide active">1</div>
+        <div class="slide">2</div>
+        <div class="slide">3</div>
+        <div class="slide">4</div>
     </div>
     <div>
         <button id="next">Next</button>
         <button id="bofore">Before</button>
+        <button id="autoSlides">autoSlides</button>
     </div>
     <script>
 
@@ -45,36 +48,40 @@
         var before = document.querySelector('#before')
         var slides = document.querySelectorAll('.slide');
         var start = 0;
+        var length= slides.length;
+        var autoSlides = document.getElementById('autoSlides');
+        var interval;
 
         function onClickNext(){
-            if(start < 3){
+
             slides[start].classList.remove('active');
-            slides[start + 1].classList.add('active');
             start = start + 1;
+            if(start === length){
+                start = 0;
             }
-            else{
-                
-            
-               
-            }
-        
+            slides[start].classList.add('active');
 
         }
-        function onClickBefore(){
-            if(start > 0){
-                slides[start].classList.remove('active');
-                slides[start - 1].classList.add('active');
-                start = start - 1;
-
+     /*   function onClickBefore(){
+            slides[start].classList.remove('active');
+            start -= 1;
+            if(start === 0){
+                start = length;
             }
-            else{
+            slides[start].classList.add('active');
+    
+        }
+*/
+        function onClickAutoSlides(){
+            clearInterval(interval);
+            interval = setInterval(onClickNext, 1000);
+        }
 
-            }
 
-
-        } //next 완성 , 이전으로 진행 setInterval를 이용해서 자동으로 넘어가게 만들기.
+         //next 완성 , 이전으로 진행 setInterval를 이용해서 자동으로 넘어가게 만들기.
         next.addEventListener('click', onClickNext);
-        before.addEventListener('click', onClickBefore);
+     //   before.addEventListener('click', onClickBefore);
+        autoSlides.addEventListener('click', onClickAutoSlides);
 
 
     </script>

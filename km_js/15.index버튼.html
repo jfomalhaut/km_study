@@ -1,0 +1,54 @@
+<html>
+<head>
+    <style>
+        .circle{
+            width: 150px;
+            height: 150px;
+            background: lightgray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .container{
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            margin:100px auto;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <script>
+        //var activeIndex = 0;
+        var activeIndex = null;
+        var circles=document.querySelectorAll('.circle');
+        
+        function onClickCircles(index){
+            if(activeIndex !== null){
+                 circles[activeIndex].classList.remove('active');
+            }
+            
+             activeIndex = index;
+
+            circles[activeIndex].classList.add('active');
+            
+        }
+
+    // 숙제 다시눌럿을때 다시 끄게
+        circles.forEach(function(element, index){
+            element.addEventListener('click', function(){
+                onClickCircles(index);
+            });
+        });
+        
+
+    </script>
+</body>
+</html>
