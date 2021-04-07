@@ -1,0 +1,28 @@
+<html>
+<body>
+	<button onclick="plus()">더하기</button>
+	<button onclick="autoCount()">자동카운팅</button>
+	<button onclick="stopCount()">카운팅정지</button>
+	<h1 id="result">0</h1>
+	<script>
+		var result = document.querySelector('#result');
+		var index = 0;
+		var interval;
+
+		function plus() {
+			index += 1;
+			result.innerHTML = index;
+		}
+
+		function autoCount() {
+			clearInterval(interval);
+			interval = setInterval(plus, 1000);
+		}
+
+		function stopCount() {
+			clearInterval(interval);
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+	<style>
+		.circle {
+			width: 150px;
+			height: 150px;
+			background: lightgray;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		.container {
+			width: 800px;
+			display: flex;
+			justify-content: space-between;
+			margin: 100px auto;
+		}
+
+		.active {
+			background: dodgerblue;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+
+	<script>
+		var activeIndex = null;
+		var circles = document.querySelectorAll('.circle');
+
+		function onClickCircle(index) {
+			if (activeIndex !== null) {
+				circles[activeIndex].classList.remove('active');
+			}
+			if (activeIndex === index) {
+				activeIndex = null;
+				return;
+			}
+			activeIndex = index;
+			circles[activeIndex].classList.add('active');
+		}
+
+		circles.forEach(function(element, index) {
+			element.addEventListener('click', function() {
+				onClickCircle(index);
+			});
+		});
+		
+	</script>
+</body>
+</html>

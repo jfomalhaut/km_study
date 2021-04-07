@@ -14,6 +14,10 @@
 			height: 100%;
 			opacity: 0;
 			transition: .5s;
+			line-height: 300px;
+			font-size: 150px;
+			color: #fff;
+			text-align: center;
 		}
 		.slide:nth-child(1) { background: dodgerblue; }
 		.slide:nth-child(2) { background: tomato; }
@@ -28,21 +32,28 @@
 </head>
 <body>
 	<div class="container">
-		<div class="slide active"></div>
-		<div class="slide"></div>
-		<div class="slide"></div>
-		<div class="slide"></div>
+		<div class="slide active">1</div>
+		<div class="slide">2</div>
+		<div class="slide">3</div>
+		<div class="slide">4</div>
 	</div>
 	<div>
 		<button id="next">Next</button>
 	</div>
 	<script>
-
+		var index = 0;
 		var next = document.querySelector('#next');
 		var slides = document.querySelectorAll('.slide');
+		var length = slides.length;
 
 		function onClickNext() {
-			
+			slides[index].classList.remove('active');
+			index++;
+			// if (index === length) {
+			// 	index = 0;
+			// }
+			index = index % length; // 4 됐을 때 0으로 바뀌어야 한다.
+			slides[index].classList.add('active');
 		}
 
 		next.addEventListener('click', onClickNext);

@@ -13,3 +13,6 @@ v 값 불러오고 사용하기
 v addEventListener, scroll
 v classList, add/remove
 v index개념을 위한 fadeIn, Out 효과 적용
+
+[3일차]
+fadeIn-out 구현
