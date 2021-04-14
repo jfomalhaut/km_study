@@ -29,15 +29,34 @@
         //var activeIndex = 0;
         var activeIndex = null;
         var circles=document.querySelectorAll('.circle');
+        var onoff = null;
         
         function onClickCircles(index){
-            if(activeIndex !== null){
-                 circles[activeIndex].classList.remove('active');
+
+           if(activeIndex !== null){
+                circles[activeIndex].classList.remove('active');
+           }
+
+            if(activeIndex !== index){
+                activeIndex = index;
+                circles[activeIndex].classList.add('active');
+            }
+            else if(activeIndex == index){
+                circles[activeIndex].classList.remove('active');
+                activeIndex = null;
+                
             }
             
-             activeIndex = index;
+                
+                
+            
+            
+             
+             
 
-            circles[activeIndex].classList.add('active');
+          
+
+            
             
         }
 
