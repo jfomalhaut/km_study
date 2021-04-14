@@ -1,4 +1,4 @@
-module.exprots = {
+module.exports = {
     //어디서 시작하는가?
     entry: [  
         "./src/index.js"
