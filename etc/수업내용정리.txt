@@ -16,3 +16,7 @@ v index개념을 위한 fadeIn, Out 효과 적용
 
 [3일차]
 fadeIn-out 구현
+
+[4일차]
+es6, 
+map, filter, concat, spread, dotdotdot

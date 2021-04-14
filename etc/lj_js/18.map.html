@@ -1,0 +1,33 @@
+<html>
+<body>
+	<script>
+
+		// map의 용도란?
+		// 배열의 내용물 바꾸기.
+
+		var hobby = ['축구', '농구', '롤', '야구', '보드게임'];
+		// for 문 이용해서 롤 => 다른것으로 바꿔보기.
+		// Hint: 새로운 배열. for문, 담기
+		var newHobboy = [];
+		for (var i in hobby) {
+			if (hobby[i] !== '롤') {
+				newHobboy.push(hobby[i]);
+			}
+		}
+
+		var newHobby2 = hobby.map(item => {
+			return item === '롤' ? '국궁' : item;
+
+			// if (item === '롤') {
+			// 	return '국궁';
+			// } else {
+			// 	return item;
+			// }
+		});
+
+		var newHobby3 = hobby.map(item => item === '롤' ? '국궁' : item);
+
+		console.log(newHobby3);
+	</script>
+</body>
+</html>
