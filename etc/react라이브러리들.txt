@@ -1,0 +1,20 @@
+[react]
+1) react
+2) react-router-dom
+3) react-dom
+
+[webpack]
+1) webpack
+2) webpack-cli
+3) webpack-dev-server
+
+[babel]
+1) babel-loader
+2) @babel/core
+3) @babel/preset-env
+4) @babel/preset-react
+5) @babel/polyfill
+
+$ npm i -s react react-dom react-router-dom
+$ npm i -D webpack webpack-cli webpack-dev-server
+$ npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/polyfill
