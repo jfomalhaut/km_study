@@ -1,4 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
+import Counter from './routers/Counter';
 
-ReactDOM.render(<h1>Hello, React</h1>, document.querySelector('#root'));
+ReactDOM.render(<Counter />, document.querySelector('#root')); 

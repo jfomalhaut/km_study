@@ -1,0 +1,16 @@
+기존
+
+html에서 요소 만들고 아이디#count준다
+버튼도 만들어준다.
+
+js에서
+#count 요소 잡아주고,
+변수 만들어주고
+click을 할때마다 변수에 +1을 해주고,
+그 값을 #count에다가 innerHTML으로 변경해준다.
+
+React
+return 안에 state값을 잡아주고,
+useState를 통해서 값을 연동해준다.
+그리고 버튼으로 state값을 바꿔준다.
+이 떄 값을 바꿔주는 요소는 useState의 두 번째 인자다.
