@@ -1,0 +1,23 @@
+<script>
+
+
+	var hanhwa = {
+		kor: '한화',
+		location: '대전',
+		team: {
+			better: {
+				number1: '김태균',
+				number2: '정근우',
+				number3: '이용우',
+			}
+		}
+	};
+	var betters = hanhwa.team.better;
+	var player1 = betters.number1;
+	var player2 = betters.number2;
+	var player3 = betters.number3;
+
+	const { team: { better: { number1, number2, number3 } } } = hanhwa;
+	console.log(number1, number2, number3);
+
+</script>
