@@ -1,9 +1,15 @@
 import React, {useState , useEffect} from 'react';
 
+const PRICE = 3500;
+const FEE = 2500;
+
+
 function Counter(){
 
     const [count, setCount] = useState(0);
     const [add, setAdd] = useState('');
+    const [fee, setfee] = useState(FEE);
+    
    
     
     
@@ -11,6 +17,11 @@ function Counter(){
         const { target: { value } } = ev;
         setAdd(value);
     };
+
+    const comma = (number) => {
+        return new Intl.NumberFormat().format(number);
+    }
+
 
     const increament = () => {
        
@@ -27,8 +38,14 @@ function Counter(){
     }
 
     useEffect(()=>{
-        console.log(count);
-    }, [count]);
+        console.log(count * PRICE + fee);
+        if (count * PRICE < 30000){
+            setfee(FEE);
+        }
+        else{
+            setfee(0);
+        }
+    }, [count])
 
 
     
@@ -36,12 +53,20 @@ function Counter(){
 
     return(
         <div>
-            <h1>Count: {count}</h1>
+
+            {/*
             <input type="text" value={add} onChange={onChangeHandler}  />
-            <h3>{add}</h3>
             <button onClick={plus}>입력한 값 더하기</button>
+            <h3>{add}</h3>*/}
             <button onClick={increament}>증가</button>
             <button onClick={minus}>감소</button>
+            <h1>1개 가격 : {comma(PRICE)}원</h1>
+            <h1>수량: {count}</h1>
+            
+            <h1>배송료: {comma(fee)}원</h1>
+            <h1>TOTAL: {comma(count * PRICE + fee)}원</h1>
+            
+
         </div>
         
     );
